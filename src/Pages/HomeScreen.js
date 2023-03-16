@@ -7,9 +7,13 @@ import HomeBanner from '../Components/Banners/HomeBanner';
 const HomeScreen = () => {
   return (
     <div>
-      <HeaderHome />
+      <div className='primaryWrapper'>
+        <HeaderHome />
+      </div>
       <HomeBanner />
-      <h1>This is Home Screen</h1>
+      <div className='bg-primary primaryWrapper'>
+        <h1>This is Home Screen</h1>
+      </div>
     </div>
   )
 }
