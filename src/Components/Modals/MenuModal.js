@@ -1,4 +1,6 @@
 import React from 'react';
+// REACT ROUTER DOM
+import { Link } from "react-router-dom";
 // REACT-BOOTSTRAP
 import Modal from 'react-bootstrap/Modal';
 // ICONS
@@ -17,12 +19,27 @@ const MenuModal = (props) => {
       <Modal.Body>
         <div className='row g-0 menuOptions'>
           <ul>
-            <li>The blog</li>
-            <li>Visit the shop</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Tiktok</li>
-            <li>Liketoknowit</li>
+            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>The blog</li>
+            </Link>
+            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>Visit the shop</li>
+            </Link>
+            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>About</li>
+            </Link>
+            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>Contact</li>
+            </Link>
+            <Link to={"/tiktoklately"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>Tiktok</li>
+            </Link>
+            <Link to={"/instagram"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>Instagram</li>
+            </Link>
+            <Link to={"/liketoknowit"} style={{ textDecoration: "none", color: "#444" }}>
+              <li>Liketoknowit</li>
+            </Link>
           </ul>
         </div>
       </Modal.Body>

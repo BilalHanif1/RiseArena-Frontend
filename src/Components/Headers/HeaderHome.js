@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 // ICONS
 import { Search, List } from 'react-bootstrap-icons';
 // LOGO
-import logo from "../../Assets/img/logo.svg"
+import logo from "../../Assets/img/logo.png"
 // COMPONENTS
 import MenuModal from '../Modals/MenuModal';
 
@@ -24,12 +24,12 @@ const HeaderHome = () => {
     <>
       <nav>
         <div className='row g-0 justify-content-between align-items-center navContainer'>
-          <div className='col-auto col-sm-7 pe-sm-5 pe-md-0 col-md-6 text-end'>
-            <Link to="/">
+          <div className='col-auto col-sm-9 text-left text-sm-center ps-xxl-5 offset-sm-1'>
+            <Link to="/" className='ms-sm-5'>
               <img src={logo} alt="Rise Arena Logo" className='logo' />
             </Link>
           </div>
-          <div className='col-auto'>
+          <div className='col col-sm-2 text-end'>
             {/* <input placeholder='search' /> */}
             <span className='headerSearchBtn'><Search /></span>
             <span className='headerFriesMenu' onClick={handleToggleMenuModal}><List /></span>

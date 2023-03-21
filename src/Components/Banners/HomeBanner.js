@@ -2,8 +2,13 @@ import React from 'react'
 
 const HomeBanner = () => {
   return (
-    <div>
-      <h2>Hero Area</h2>
+    <div className='actionAreaWrapper'>
+      <div className='actionArealeft'></div>
+      <div className='bg-warning actionAreaContent'>
+        <div className='row g-0 my-5 bg-primary'>
+          <h1>Sample heading</h1>
+        </div>
+      </div>
     </div>
   )
 }
