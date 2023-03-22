@@ -22,16 +22,16 @@ const Instagram = () => {
         {/* Header */}
         <HeaderHome />
         {/* Links */}
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden  mt-3 mt-lg-4'>
           <div className='row g-3 justify-content-center align-items-center'>
             <div className='col-auto'>
               <Link to={"/"} className="socialCardLinks" >
-                <p>The Blog</p>
+                <p className='mb-0'>The Blog</p>
               </Link>
             </div>
             <div className='col-auto'>
               <Link to={"/"} className="socialCardLinks" >
-                <p>Visit The Shop</p>
+                <p className='mb-0'>Visit The Shop</p>
               </Link>
             </div>
           </div>

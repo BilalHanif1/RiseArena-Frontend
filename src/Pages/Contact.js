@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 // COMPONENTS
 import HeaderHome from '../Components/Headers/HeaderHome';
-import SocialMediaCards from '../Components/SocialMedia/SocialMediaCards';
-import Categories from '../Components/Categories/Categories';
 import TheLatestOnTheBlog from '../Components/Featured/TheLatestOnTheBlog';
 import InboxSubscription from '../Components/Subscriptions/InboxSubscription';
 import Footer from '../Components/Footer/Footer';
+// IMAGES
+import dp from "../Assets/img/dp.jpg";
 
-const TikTokLately = () => {
-  // States
-  const [socialHeading, setSocialHeading] = useState("Tik tok lately");
-  const [socialDescription, setSocialDescription] = useState("Lorem ipsum dolor sit amet consectetur. Neque nulla eget lobortis pellentesque commodo vitae libero massa. Eget et neque condimentum nulla. Ipsum habitasse.");
-  const [catHeading, setCatHeading] = useState("Shop my Amazon Storefront");
-  const [catDescription, setCatDescription] = useState("Lorem ipsum dolor sit amet consectetur. Neque nulla eget lobortis pellentesque commodo vitae libero massa. Eget et neque condimentum nulla. Ipsum habitasse.");
-
-
-  // Content
+// COMPONENT FUNCTION
+const Contact = () => {
   return (
     <div>
-      <div className='primaryWrapper socialCardWrapper'>
+      <div className='primaryWrapper letsConnect'>
         {/* Header */}
         <HeaderHome />
         {/* Links */}
@@ -37,11 +30,22 @@ const TikTokLately = () => {
             </div>
           </div>
         </div>
-        {/* Social Media Cards */}
-        <SocialMediaCards heading={socialHeading} description={socialDescription} />
-        {/* Categories */}
-        <div>
-          <Categories heading={catHeading} description={catDescription} />
+        <div className='row g-0 justify-content-center mt-4 mt-lg-5 mb-3 mb-lg-4'>
+          <section className='col-12 col-md-9 col-lg-8 col-xl-7 col-xxl-5 text-center'>
+            <h3 className='fw-bold'>Let's Connect</h3>
+            <p className='mt-3 mt-lg-4'>Effortlessly take your first steps in EOS photography and enjoy great picture quality
+              with countless creative opportunities.</p>
+          </section>
+        </div>
+        {/* Display Picture */}
+        <div className='row g-0 justify-content-center align-items-center contactDpWrapper mb-3 mb-lg-5'>
+          <div className='rounded contactDp'>
+            <img src={dp} class="rounded" alt="contact page user" />
+            <ul>
+              <li>name@email.com</li>
+              <li>(+33)7 00 55 54 79</li>
+            </ul>
+          </div>
         </div>
         {/* The Latest on The Blog */}
         <div>
@@ -58,4 +62,4 @@ const TikTokLately = () => {
   )
 }
 
-export default TikTokLately
+export default Contact

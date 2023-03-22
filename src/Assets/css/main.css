@@ -37,7 +37,7 @@ p {
   --bgLowlight: #fefae0;
   --bgFooter: #d4bdde;
   --bgModal: #d5dcdf;
-  --bgInput: #ddd;
+  --bgInput: #eee;
   --heroBgLeft: #F9F1E7;
   --heroBgRight: #FCF8F3;
   --footerHeading: #333;
@@ -45,6 +45,19 @@ p {
   --modalBoxShadow: 0px 0px 20px 5px rgba(15, 15, 15, 0.35);
   --inboxSubBg: linear-gradient(to right, #893a8ddc, #893a8d15, #ffffff23);
   --cfSubBg: linear-gradient(to top, #893a8ddc, #893a8d15, #ffffff23);
+}
+
+
+/* Home Screen */
+
+.catTabs .nav-tabs .nav-link {
+  border: none !important;
+  color: #444 !important;
+  cursor: pointer;
+}
+
+.catTabs .nav-tabs .nav-link.active {
+  border-bottom: 2px solid var(--primeColor) !important;
 }
 
 /* HEADER */
@@ -326,22 +339,54 @@ p {
   position: relative;
   width: 100%;
   background-color: var(--heroBgRight);
-  height: 150px;
+  height: 80vh;
 }
 
 .actionAreaWrapper .actionArealeft {
   background-color: var(--heroBgLeft);
-  width: 66%;
+  width: 66.67%;
   height: 100%;
+  position: relative;
 }
 
-.actionAreaWrapper .actionAreaContent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
+.actionAreaWrapper .actionAreaRight {
+  width: 33.33%;
   height: 100%;
+  background-color: var(--heroBgRight);
+  position: relative;
+}
+
+.heroSliderWrapper {
+  position: absolute;
+  top: 12%;
+}
+
+.heroSliderContent img {
+  width: 100%;
+  object-fit: cover;
+  height: 65vh;
+}
+
+.heroSliderWrapper .splide__arrow--next {
+  right: 1em;
+}
+
+.heroHighlights {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 25%;
+  border-radius: 5px;
+}
+
+.heroHighlights h1 {
+  font-weight: bold;
+  color: #000;
+}
+
+.heroHighlights p {
+  font-size: 14px;
 }
 
 /* Categories */
@@ -386,6 +431,206 @@ p {
   object-fit: cover;
 }
 
+/* =================================== Contact =================================== */
+
+.letsConnect .contactDpWrapper {
+  margin-top: 150px;
+}
+
+.letsConnect .contactDp {
+  position: relative;
+  text-align: center;
+  border: 1px solid var(--primeColor);
+  width: 540px;
+  height: 450px;
+  background-color: var(--heroBgLeft);
+  transition: all ease-in 250ms;
+}
+
+.letsConnect .contactDp img {
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  position: absolute;
+  top: -120px;
+  transform: translateX(-50%);
+  transition: all ease-in 250ms;
+}
+
+.letsConnect .contactDp ul {
+  list-style: none;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0px;
+}
+
+.letsConnect .contactDp ul li {
+  font-family: var(--font);
+  font-size: 24px;
+  color: var(--primeColor);
+  padding: 4px 0px;
+  transition: all ease-in 250ms;
+}
+
+
+/* =================================== Visit The Shop =================================== */
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchWrapper input {
+  background-color: var(--bgInput);
+  border: 1px solid var(--bgInput);
+  padding: 8px 16px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  transition: all ease-in 200ms;
+}
+
+.searchWrapper input:focus {
+  border-color: var(--primeColor);
+}
+
+.searchWrapper span.searchIcon {
+  font-size: 20px;
+  padding: 5px 0px;
+  position: absolute;
+  right: 16px;
+  bottom: 2px;
+  cursor: pointer;
+  transition: all ease-in 200ms;
+}
+
+.searchWrapper span.searchIcon:hover {
+  color: var(--primeColor);
+}
+
+.shopCard {
+  padding: 18% 6%;
+  background-color: var(--heroBgLeft);
+}
+
+.shopBtn .btn {
+  background-color: var(--primeColor);
+  color: var(--white);
+  padding: 8px 16px;
+  transition: all ease-in 200ms;
+  text-transform: uppercase;
+}
+
+.shopBtn .btn:hover {
+  background-color: var(--secondColor);
+}
+
+.tikTokSliderWrapper {
+  width: 91.50%;
+  background-color: var(--heroBgLeft);
+  height: 700px;
+}
+
+.collectionRedirect h2 {
+  font-family: var(--font);
+}
+
+.collectionRedirect button.btn {
+  background-color: var(--primeColor);
+  padding: 8px 16px;
+  color: var(--white);
+  text-transform: uppercase;
+  transition: all ease-in 200ms;
+}
+
+.collectionRedirect button.btn:hover {
+  background-color: var(--secondColor);
+}
+
+.sliderContent img {
+  /* width: 370px; */
+  width: 95%;
+  height: 450px;
+  transition: all ease-in 200ms;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.splide__list .is-active .sliderContent img {
+  height: 520px;
+}
+
+li.splide__slide {
+  /* width: 100% !important; */
+}
+
+.splide__pagination {
+  bottom: 24px;
+  transition: all ease-in 200ms;
+}
+
+.splide__pagination__page,
+.splide__pagination__page.is-active {
+  background-color: var(--primeColor);
+}
+
+
+
+/* =================================== About =================================== */
+
+.about {
+  margin-bottom: 150px;
+}
+
+.AboutMainRibbon {
+  width: 100%;
+  height: 330px;
+  background-color: var(--heroBgLeft);
+  transition: all ease-in 250ms;
+}
+
+.aboutImages {
+  position: relative;
+}
+
+.aboutImages img.bio {
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: contain;
+  position: absolute;
+  /* top: -120px; */
+  left: 43%;
+  transform: translate(-50%, -25%);
+  transition: all ease-in 250ms;
+  rotate: -17deg;
+}
+
+.aboutImages img.bioSecondary {
+  max-width: 290px;
+  max-height: 290px;
+  object-fit: contain;
+  position: absolute;
+  /* top: -120px; */
+  right: 40%;
+  transform: translate(45%, -10%);
+  transition: all ease-in 250ms;
+  rotate: 12deg;
+}
+
+.aboutMeSecondary {
+  position: absolute;
+  rotate: 12deg;
+  left: 30%;
+  transform: translate(10%, 25%);
+  transition: all ease-in 250ms;
+  z-index: -1;
+}
+
+.wantToSeeWrapper {
+  width: 100%;
+  background-color: var(--heroBgLeft);
+}
 
 
 /* MISC. */
@@ -399,6 +644,85 @@ p {
 
 
 /* =================================== MEDIA QUERIES =================================== */
+
+
+/* HomePage */
+
+@media(max-width: 1399px) {
+  .heroHighlights {
+    width: 30%;
+    top: 14%;
+  }
+}
+
+@media(max-width: 1199px) {
+  .heroHighlights {
+    width: 40%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .heroHighlights {
+    width: 50%;
+    top: 19%;
+  }
+
+  .actionAreaWrapper {
+    height: 70vh;
+  }
+
+  .heroSliderWrapper {
+    top: 15%;
+  }
+
+  .heroSliderContent img {
+    height: 55vh;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .actionAreaWrapper {
+    height: 50vh;
+  }
+
+  .heroSliderWrapper {
+    top: 20%;
+  }
+
+  .heroSliderContent img {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 575px) {
+
+  .actionAreaWrapper {
+    height: 35vh;
+  }
+
+  .heroSliderContent img {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 399px) {
+  .actionAreaWrapper {
+    height: 20vh;
+  }
+
+  .heroSliderContent img {
+    height: 15vh;
+  }
+
+  .heroSliderWrapper {
+    top: 12%;
+  }
+
+}
+
 
 /* Paragraphs */
 @media (max-width: 575px) {
@@ -483,6 +807,313 @@ p {
   .currentFavorites h4 {
     font-size: 18px;
   }
+}
+
+/* Visit The Shop */
+@media (max-width: 1199px) {
+  .sliderContent img {
+    height: 400px;
+  }
+
+  .splide__list .is-active .sliderContent img {
+    height: 450px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sliderContent img {
+    height: 350px;
+  }
+
+  .splide__list .is-active .sliderContent img {
+    height: 400px;
+  }
+
+  .splide__pagination {
+    bottom: 5px;
+  }
+
+  .tikTokSliderWrapper {
+    width: 100%;
+  }
+
+  .collectionRedirectWrapper {
+    padding: 7%;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .sliderMainWrapper {
+    position: absolute;
+    right: -30%;
+    transform: translateY(-50%);
+  }
+
+  .splide__arrow--next {
+    right: 20%;
+    transition: all ease-in 200ms;
+  }
+
+  .collectionRedirectWrapper {
+    padding-left: 7%;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .tikTokSliderWrapper {
+    width: 100%;
+    height: 650px;
+  }
+
+
+}
+
+@media (max-width: 575px) {
+  .sliderContent img {
+    width: 95%;
+    height: auto;
+    transition: all ease-in 400ms;
+  }
+
+  .splide__list .is-active .sliderContent img {
+    height: 270px;
+  }
+
+  .tikTokSliderWrapper {
+    height: 550px
+  }
+}
+
+@media (max-width: 399px) {
+  .splide__list .is-active .sliderContent img {
+    height: 180px;
+  }
+
+  .tikTokSliderWrapper {
+    height: 450px
+  }
+
+}
+
+/* Contact */
+
+@media (max-width: 767px) {
+  .letsConnect .contactDp {
+    width: 490px;
+    height: 400px;
+  }
+
+  .letsConnect .contactDp img {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  .letsConnect .contactDp ul li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .letsConnect .contactDp {
+    width: 300px;
+    height: 250px;
+  }
+
+  .letsConnect .contactDp img {
+    max-width: 220px;
+    max-height: 220px;
+  }
+
+  .letsConnect .contactDp ul li {
+    font-size: 16px;
+  }
+}
+
+/* About */
+@media (max-width: 1399px) {
+
+  .about {
+    margin-bottom: 120px;
+  }
+
+  .aboutImages img.bioSecondary {
+    right: 35%;
+  }
+
+}
+
+@media (max-width: 1199px) {
+
+  .about {
+    margin-bottom: 100px;
+  }
+
+  .aboutImages img.bioSecondary {
+    width: 250px;
+    height: 250px;
+  }
+
+  .aboutImages img.bio {
+    width: 360px;
+    height: 360px;
+    left: 40%;
+  }
+
+}
+
+@media (max-width: 991px) {
+
+  .aboutFooter {
+    position: absolute;
+    bottom: -2030px;
+    width: 100%;
+
+  }
+
+  .preTabWrapper {
+    position: absolute;
+    top: 1200px;
+    width: 100%;
+  }
+
+  .myStoryWrapper {
+    position: absolute;
+    top: 600px;
+    width: 100%;
+  }
+
+  .about {
+    margin-bottom: 90px;
+  }
+
+  .aboutMeWrapper .aboutImages {
+    text-align: center;
+  }
+
+  .aboutMePara {
+    position: absolute;
+    top: 400px;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .aboutMe {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    left: 25%;
+  }
+
+  .aboutMeSecondary {
+    width: 240px;
+    height: 240px;
+    left: 50%;
+  }
+
+  .AboutMainRibbon {
+    height: 300px;
+  }
+
+  .aboutImages img.bioSecondary {
+    width: 230px;
+    height: 230px;
+    right: 32%;
+  }
+
+  .aboutImages img.bio {
+    width: 320px;
+    height: 320px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .preTabWrapper {
+    top: 950px;
+  }
+
+  .myStoryWrapper {
+    top: 470px;
+  }
+
+  .about {
+    margin-bottom: 70px;
+  }
+
+  .aboutMePara {
+    top: 250px;
+  }
+
+  .aboutMe {
+    width: 230px;
+    height: 230px;
+    left: 25%;
+  }
+
+  .aboutMeSecondary {
+    width: 180px;
+    height: 180px;
+    left: 40%;
+  }
+
+  .AboutMainRibbon {
+    height: 210px;
+  }
+
+  .aboutImages img.bioSecondary {
+    width: 190px;
+    height: 190px;
+  }
+
+  .aboutImages img.bio {
+    width: 230px;
+    height: 230px;
+  }
+
+}
+
+@media (max-width: 399px) {
+
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .aboutMePara {
+    top: 180px;
+  }
+
+  .aboutMe {
+    width: 170px;
+    height: 170px;
+    left: 25%;
+  }
+
+  .aboutMeSecondary {
+    width: 125px;
+    height: 125px;
+    left: 40%;
+  }
+
+  .AboutMainRibbon {
+    height: 140px;
+  }
+
+  .aboutImages img.bioSecondary {
+    width: 125px;
+    height: 125px;
+    right: 25%;
+  }
+
+  .aboutImages img.bio {
+    width: 170px;
+    height: 170px;
+  }
+
 }
 
 /* Misc. */

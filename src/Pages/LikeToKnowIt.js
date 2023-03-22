@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 // COMPONENTS
 import HeaderHome from '../Components/Headers/HeaderHome';
 import SocialMediaCards from '../Components/SocialMedia/SocialMediaCards';
-import Categories from '../Components/Categories/Categories';
 import TheLatestOnTheBlog from '../Components/Featured/TheLatestOnTheBlog';
 import InboxSubscription from '../Components/Subscriptions/InboxSubscription';
 import Footer from '../Components/Footer/Footer';
@@ -22,26 +21,37 @@ const LikeToKnowIt = () => {
         {/* Header */}
         <HeaderHome />
         {/* Links */}
-        <div className='overflow-hidden'>
+        <div className='overflow-hidden mt-3 mt-lg-4'>
           <div className='row g-3 justify-content-center align-items-center'>
             <div className='col-auto'>
               <Link to={"/"} className="socialCardLinks" >
-                <p>The Blog</p>
+                <p className='mb-0'>The Blog</p>
               </Link>
             </div>
             <div className='col-auto'>
               <Link to={"/"} className="socialCardLinks" >
-                <p>Visit The Shop</p>
+                <p className='mb-0'>Visit The Shop</p>
               </Link>
             </div>
           </div>
         </div>
         {/* Social Media Cards */}
         <SocialMediaCards heading={socialHeading} description={socialDescription} />
-        {/* Categories */}
-        <div>
-          <Categories heading={catHeading} description={catDescription} />
+      </div>
+      {/* Want to see more */}
+      <div className='mt-4 mt-lg-5 py-3 py-lg-5'>
+        <div className='row g-0 justify-content-center align-items-center wantToSeeWrapper py-5'>
+          <div className='col-12 collectionRedirect text-center'>
+            <h2 className='fw-bold'>Want To See More?</h2>
+            <div className='row g-0 justify-content-center align-items-center my-3 my-lg-4'>
+              <div className='col-auto'>
+                <button className='btn'>keep watching</button>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div className='primaryWrapper socialCardWrapper'>
         {/* The Latest on The Blog */}
         <div>
           <TheLatestOnTheBlog />

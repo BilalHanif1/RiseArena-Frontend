@@ -19,16 +19,16 @@ const MenuModal = (props) => {
       <Modal.Body>
         <div className='row g-0 menuOptions'>
           <ul>
-            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+            <Link to={"/blog"} style={{ textDecoration: "none", color: "#444" }}>
               <li>The blog</li>
             </Link>
-            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+            <Link to={"/visittheshop"} style={{ textDecoration: "none", color: "#444" }}>
               <li>Visit the shop</li>
             </Link>
-            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+            <Link to={"/about"} style={{ textDecoration: "none", color: "#444" }}>
               <li>About</li>
             </Link>
-            <Link to={"/"} style={{ textDecoration: "none", color: "#444" }}>
+            <Link to={"/contact"} style={{ textDecoration: "none", color: "#444" }}>
               <li>Contact</li>
             </Link>
             <Link to={"/tiktoklately"} style={{ textDecoration: "none", color: "#444" }}>
