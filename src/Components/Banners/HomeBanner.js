@@ -7,6 +7,8 @@ import '@splidejs/react-splide/css';
 import heroImage from "../../Assets/img/heroImage.jpg";
 import heroImage2 from "../../Assets/img/heroImage2.jpg";
 import heroImage3 from "../../Assets/img/heroImage3.jpg";
+// ICONS
+import { ArrowRight } from 'react-bootstrap-icons';
 
 
 const HomeBanner = () => {
@@ -73,9 +75,10 @@ const HomeBanner = () => {
           </div>
         </Splide>
       </div>
+      {/* Hero Highlights */}
       <div className='heroHighlights p-2 p-sm-3 p-lg-4 d-none d-md-block'>
         <div className='row g-0 justify-content-center align-items-center py-5 px-4'>
-          <div className='col-12'>
+          <div className='col-auto'>
             <h1>Shop My Exciting Amazon Store</h1>
             <p className=' mt-3'>Lorem ipsum dolor sit amet consectetur. Vitae tortor ipsum nunc id diam id accumsan. Ultrices ornare et sit metus in penatibus cras diam.</p>
           </div>
@@ -84,8 +87,29 @@ const HomeBanner = () => {
           </div>
         </div>
       </div>
-      <div className='heroActionHighlights'>
-
+      {/* Hero Action Highlights */}
+      <div className='heroActionHighlights d-none d-sm-block'>
+        <div className='row g-0 align-items-center px-4 pt-2'>
+          <section className='col-auto'>
+            <h3>New Collection</h3>
+            <p className='text-secondary my-4'>Luxury big sofa 2-seat</p>
+          </section>
+        </div>
+        <div className='row g-0 align-items-center justify-content-between px-4 pb-2'>
+          <div className='col'>
+            <p className='text-black mb-0'>Rp 17.000.000</p>
+          </div>
+          <div className='col-auto heroActionArrow align-self-center pb-1'>
+            <ArrowRight />
+          </div>
+        </div>
+      </div>
+      <div className='heroActionBtn d-block d-sm-none'>
+        <div className='row g-0 justify-content-center align-items-center'>
+          <div className='col-auto shopBtn text-center'>
+            <button className='btn w-100'>shop now</button>
+          </div>
+        </div>
       </div>
     </div>
   )
