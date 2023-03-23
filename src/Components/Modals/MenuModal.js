@@ -25,7 +25,7 @@ const MenuModal = (props) => {
             <Link to={"/visittheshop"} style={{ textDecoration: "none", color: "#444" }}>
               <li>Visit the shop</li>
             </Link>
-            <Link to={"/about"} style={{ textDecoration: "none", color: "#444" }}>
+            <Link to={"/aboutpage"} style={{ textDecoration: "none", color: "#444" }}>
               <li>About</li>
             </Link>
             <Link to={"/contact"} style={{ textDecoration: "none", color: "#444" }}>

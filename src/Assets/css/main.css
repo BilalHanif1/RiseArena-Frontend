@@ -610,9 +610,56 @@ li.splide__slide {
 
 /* =================================== About =================================== */
 
+.knowMeDetails {
+  margin: 48px 0px 0px;
+  padding: 48px;
+  background-color: var(--heroBgLeft);
+  transition: all ease-in 200ms;
+}
+
+.aboutMyStorySecondary {
+  position: relative;
+  z-index: -1;
+  rotate: 12deg;
+  transform: translate(-45%, 10%);
+}
+
+.aboutMePageSecondary {
+  position: relative;
+  z-index: -1;
+  rotate: 12deg;
+  transform: translate(-45%, 10%);
+}
+
+img.aboutPageImagePrimary {
+  max-width: 55%;
+  transition: all ease-in 200ms;
+}
+
+img.aboutPageImageMinor {
+  max-width: 35%;
+  transition: all ease-in 200ms;
+}
+
+.aboutPageMainRibbon {
+  width: 100%;
+  background-color: var(--heroBgLeft);
+  transition: all ease-in 200ms;
+}
+
+img.aboutBio {
+  rotate: -17deg;
+}
+
+img.aboutBioSecondary {
+  rotate: 12deg;
+}
+
 .about {
   margin-bottom: 150px;
 }
+
+/* ================================== */
 
 .AboutMainRibbon {
   width: 100%;
@@ -1005,6 +1052,14 @@ li.splide__slide {
 }
 
 @media (max-width: 991px) {
+
+  img.aboutMePagePrimary,
+  img.aboutMePageSecondary,
+  img.aboutMyStoryPrimary,
+  img.aboutMyStorySecondary {
+    position: relative;
+    left: 15%;
+  }
 
   .aboutFooter {
     position: absolute;
